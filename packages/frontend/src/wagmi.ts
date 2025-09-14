@@ -19,7 +19,7 @@ export const config = getDefaultConfig({
     optimism,
     arbitrum,
     base,
-    anvil,
+    // anvil,
     defineChain({
       id: 31_337,
       name: 'Local',
@@ -34,8 +34,7 @@ export const config = getDefaultConfig({
           webSocket: ['ws://127.0.0.1:8545'],
         },
       },
-}),
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
+    }),
   ],
-  ssr: true,
+  // ssr: true,
 });

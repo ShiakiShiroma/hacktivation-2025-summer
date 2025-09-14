@@ -16,16 +16,17 @@ const Home: NextPage = () => {
       alert("MetaMaskが見つかりません");
       return;
     }
+    console.log(counterABI.abi);
     setLoading(true);
     try {
+        console.log(window.ethereum);
       const web3 = new Web3(window.ethereum as any);
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
-      const accounts = await web3.eth.getAccounts();
+      const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
       const contract = new web3.eth.Contract(counterABI.abi, CONTRACT_ADDRESS);
       await contract.methods.increment().send({ from: accounts[0] });
       alert("increment実行しました！");
     } catch (err) {
-      alert("エラー: " + (err as any).message);
+      console.log(err as any);
     }
     setLoading(false);
   };
