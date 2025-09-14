@@ -1,3 +1,5 @@
+[ブロックチェーン概要説明]( https://speakerdeck.com/engineercafe/hacktivation2025-intorodakusiyon-burotukutienkotohazime )の補足資料：
+
 ```meramaid
 graph TD
   %% blockchainの定義
