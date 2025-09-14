@@ -1,5 +1,6 @@
 [ブロックチェーン概要説明]( https://speakerdeck.com/engineercafe/hacktivation2025-intorodakusiyon-burotukutienkotohazime )の補足資料：
 
+```
 [1] 日本産業標準調査会, 「国際標準化について」, Jisc.go.jp. [Online]. Available: https://www.jisc.go.jp/international/international_standardization.html. [Accessed: 6-Sep-2025].
 [2] GBEC (Go Blockchain Engineering Community), 「GBEC - Blockchain を推進するエンジニアリングコミュニティ -」, GoBlockchain.network. [Online]. Available: https://goblockchain.network/. [Accessed: 6-Sep-2025].
 [3] “Cryptocurrency Engineering and Design,” MIT OpenCourseWare. [Online]. Available: https://ocw.mit.edu/courses/mas-s62-cryptocurrency-engineering-and-design-spring-2018/. [Accessed: 6-Sep-2025].
@@ -205,4 +206,5 @@
 [184] Aptos Foundation, “Move – A Web3 Language and Runtime,” Aptos Documentation. [Online]. Available: https://aptos.dev/network/blockchain/move. [Accessed: 6-Sep-2025].
 [185] 穆长春, 「央行数字货币的设计与架构」, 金融四十人论坛 (China Finance 40 Forum, CF40), Aug. 23, 2019. [Online]. Available: https://web.archive.org/web/20220813024925/http://www.cf40.org.cn/news_detail/8566.html. [Accessed: 6-Sep-2025]. (in Chinese)
 [186] 楊晶晶, 「中国の法定デジタル通貨」, 金融ITフォーカス, vol. 2020, no. 3, 野村総合研究所 (NRI), Mar. 2020. [Online]. Available: https://www.nri.com/jp/knowledge/publication/kinyu_itf_202003/07.html. Full-text (PDF): https://www.nri.com/-/media/Corporate/jp/Files/PDF/knowledge/publication/kinyu_itf/2020/03/itf_202003_7.pdf?la=ja-JP&hash=C978E994469A38F0E88336A12722C928625C0371. [Accessed: 6-Sep-2025]. (in Japanese)
+```
 
