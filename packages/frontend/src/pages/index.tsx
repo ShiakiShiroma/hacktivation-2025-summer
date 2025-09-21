@@ -2,8 +2,35 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import counterABI from '../abi/Counter.json';
+import { useState } from 'react';
+import Web3 from 'web3';
+
+const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 const Home: NextPage = () => {
+    const [loading, setLoading] = useState(false);
+
+    const handleIncrement = async () => {
+    if (typeof window.ethereum === "undefined") {
+      alert("MetaMaskが見つかりません");
+      return;
+    }
+    console.log(counterABI.abi);
+    setLoading(true);
+    try {
+        console.log(window.ethereum);
+      const web3 = new Web3(window.ethereum as any);
+      const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+      const contract = new web3.eth.Contract(counterABI.abi, CONTRACT_ADDRESS);
+      await contract.methods.increment().send({ from: accounts[0] });
+      alert("increment実行しました！");
+    } catch (err) {
+      console.log(err as any);
+    }
+    setLoading(false);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,6 +44,9 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <ConnectButton />
+        <button onClick={handleIncrement} disabled={loading} style={{ margin: 16, padding: 8 }}>
+          {loading ? "実行中..." : "incrementを実行"}
+        </button>
 
         <h1 className={styles.title}>
           Welcome to <a href="https://www.rainbowkit.com">RainbowKit</a> +{' '}

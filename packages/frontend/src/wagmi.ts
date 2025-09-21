@@ -1,5 +1,7 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { defineChain } from 'viem';
 import {
+  anvil,
   arbitrum,
   base,
   mainnet,
@@ -17,7 +19,22 @@ export const config = getDefaultConfig({
     optimism,
     arbitrum,
     base,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
+    // anvil,
+    defineChain({
+      id: 31_337,
+      name: 'Local',
+      nativeCurrency: {
+        decimals: 18,
+        name: 'Ether',
+        symbol: 'ETH',
+      },
+      rpcUrls: {
+        default: {
+          http: ['http://127.0.0.1:8545'],
+          webSocket: ['ws://127.0.0.1:8545'],
+        },
+      },
+    }),
   ],
-  ssr: true,
+  // ssr: true,
 });
