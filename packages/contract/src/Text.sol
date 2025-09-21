@@ -7,9 +7,10 @@ contract Text {
     uint256 public update_counter;
 
     //コンストラクタ
-//    constructor(){
-//        message = "default message";
-//    }
+    constructor(){
+        update_counter = 0;
+        message = "default message";
+    }
 
     //メソッド
     function setMessage(string calldata newMessage) public {
